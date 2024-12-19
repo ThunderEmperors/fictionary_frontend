@@ -65,6 +65,9 @@ const NavbarResponsive = (props) => {
             <Link to="/leaderboard" className="link" onClick={props.hideNav}>
               LEADERBOARD
             </Link>
+            <Link to="/cards" className="link" onClick={props.hideNav}>
+              CARDS
+            </Link>
             {/* <Link to="/question" className="link" onClick={props.hideNav}>
               PLAY
             </Link> */}

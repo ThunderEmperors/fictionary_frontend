@@ -6,6 +6,7 @@ import Leaderboard from "./Leaderboard/Leaderboard.js";
 import Login from "./Login/Login.js";
 import GameOver from "./GameOver/GameOver.js";
 import Footer from "../components/Footer/Footer.js";
+import Cards from "./Cards/Cards.js";
 
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -33,6 +34,7 @@ const App = () => {
             <Route path="/leaderboard" element={<Leaderboard />} />
             <Route path="/signin" element={<Login />} />
             <Route path="/game-finished" element={<GameOver />} />
+            <Route path="/cards" element={<Cards />} />
           </Routes>
           <Footer />
         </div>

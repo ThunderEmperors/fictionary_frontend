@@ -63,7 +63,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 const Question = () => {
   const [state, setState] = React.useState({
-    question: { text: "Loading...", round: 0 },
+    question: { text: "Loading...", round: 0, ogmedia: "", year: 0, country: "", language: "", 
+      show_country: false, show_media: false, show_language: false, show_year: false },
     loaded: true,
   });
   const [hintModalOpen, setHintModalOpen] = useState(false);
@@ -130,6 +131,7 @@ const Question = () => {
             question: res,
             loaded: true,
           });
+          console.log(state.question);
         }
       });
     });
@@ -186,6 +188,8 @@ const Question = () => {
       });
   };
 
+  
+
   React.useEffect(getQuestion, [context.token]);
 
   return (
@@ -210,6 +214,7 @@ const Question = () => {
                   <div className="round">R-{state.question.round}</div>
                 </div>
                 <QuestionTextRenderer text={state.question.text} />
+
                 {state.question.media && (
                   <div className="ques-img-wrap">
                     <img
@@ -252,11 +257,19 @@ const Question = () => {
                   }
                 >
                   <button className="hint">HINT</button>
+
                 </div>
                 <div className="submit_bg" onClick={checkAnswer}>
                   <button className="submit">SUBMIT</button>
                 </div>
               </div>
+              <div>
+                  {state.question.show_country && (<>Country: {state.question.country}<br /></>)}
+                  {state.question.show_media && (<>Original Media: {state.question.ogmedia}<br /></>)}
+                  {state.question.show_language && (<>Language: {state.question.language}<br /></>)}
+                  {state.question.show_year && (<>Year: {state.question.year}</>)}
+
+                </div>
             </>
           ) : (
             <div className="box"> 

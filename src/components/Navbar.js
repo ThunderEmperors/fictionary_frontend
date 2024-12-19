@@ -109,7 +109,13 @@ const Navbar = (props) => {
               </Link>
             </ul>
           </div>
-
+          <div className="cards">
+            <ul>
+              <Link className="button" to="/cards">
+                CARDS
+              </Link>
+            </ul>
+          </div>
           {/* <div className="leader vanish">
             <ul>
               <Link className="button" to="/leaderboard">
