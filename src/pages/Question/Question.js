@@ -131,7 +131,6 @@ const Question = () => {
             question: res,
             loaded: true,
           });
-          console.log(state.question);
         }
       });
     });

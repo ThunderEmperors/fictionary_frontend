@@ -116,6 +116,13 @@ const Navbar = (props) => {
               </Link>
             </ul>
           </div>
+          <div className="updates">
+            <ul>
+              <Link className="button" to="/updates">
+                UPDATES
+              </Link>
+            </ul>
+          </div>
           {/* <div className="leader vanish">
             <ul>
               <Link className="button" to="/leaderboard">

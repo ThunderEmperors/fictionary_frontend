@@ -11,6 +11,7 @@ import Cards from "./Cards/Cards.js";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavbarResponsive from "../components/NavbarResponsive.js";
+import Updates from "./Cards/Updates.js";
 
 const App = () => {
   const [nav, setNav] = useState(false);
@@ -35,6 +36,7 @@ const App = () => {
             <Route path="/signin" element={<Login />} />
             <Route path="/game-finished" element={<GameOver />} />
             <Route path="/cards" element={<Cards />} />
+            <Route path="/updates" element={<Updates />} />
           </Routes>
           <Footer />
         </div>
